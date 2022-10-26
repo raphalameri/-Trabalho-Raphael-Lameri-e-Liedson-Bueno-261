@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elenco di Attività</title>
+
+    <style>
+        h2{
+            color: red;
+        }
+        
+        #input{
+            background-color: black;
+            color: white;
+            border-radius: 5px;
+            margin-left: 5px;
+            padding: 10px;
+        }
+        
+        #add{
+            background-color: black;
+            color: white;
+            border-radius: 5px;
+            padding: 10px;
+        }
+        
+        #apagar{
+            background-color: black;
+            color: white;
+            border-radius: 5px;
+        }
+        
+        #tarefas{
+            background-color: aqua;
+            width: 215px;
+            height: 300px;
+            margin-left: 10px;
+            margin-right: 10px;
+            margin-top: 10px;
+        }
+        
+        #botaoo{
+            margin-left: 10px;
+        
+        }
+        </style>
+
+
+
+<style>
+    body{
+       margin: 3%;    
+       /*border: groove black 5px;*/
+       background-color: lightgray;
+
+       
+   }
+    
+   #imagem{
+       margin-left: 10px;
+       margin-right: 10px;
+   }
+   .texto{
+       font-family: courier;
+       font-size: 10px;
+       margin-left: 10px;
+       margin-right: 10px;
+   }
+</style>
+
+<style>
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #333;
+      border-radius: 5px;
+    }
+    
+    li {
+      float: left;
+    }
+    
+    li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+    
+    li a:hover:not(.active) {
+      background-color: #111;
+    }
+    
+    .active {
+      background-color: #04AA6D;
+    }
+    </style>
+</head>
+<body>
+    
+<ul>
+    <li><a href="./inicio.html">Inicio</a></li>
+        <li><a href="./Trabalho01.html">Lista de Musicas</a></li>
+        <li><a href="https://www.instagram.com/sirlamerii/?utm_medium=copy_link">Contato</a></li>
+    <li style="float:right"><a class="active" href="sulElvis.html">Sobre Elvis</a></li>
+  </ul>
+
+    <h1>
+       Insira as músicas!
+        </h1>
+        
+        <input id="input" placeholder="Digite..." type="text">
+        <button onclick="adcionar()" id="add" >  Adcionar Música </button>
+        
+      
+        
+        <script>
+        function adcionar(){
+        const conteudo= document.getElementById('input').value;
+        const novah3= document.createElement('h3');
+        novah3.innerHTML= conteudo;
+        const novobotao= document.createElement('button');
+        novobotao.innerHTML= "Ouvi/Gostei";
+        const novobotaoo= document.createElement('button');
+        novobotaoo.innerHTML= "Não ouvi/Não gostei";
+       
+        
+        novobotao.addEventListener('click', function(){
+            novah3.innerHTML=conteudo+" &#9989";    
+        
+        })
+
+        novobotaoo.addEventListener('click', function(){
+            novah3.innerHTML=conteudo+"&#10060";    
+        
+        })
+        
+        document.body.appendChild(novah3);
+        document.body.appendChild(novobotao);
+        document.body.appendChild(novobotaoo);
+        document.body.value="";
+        
+        
+        /*window.alert(conteudo);*/
+        
+        }
+        
+        
+         
+            
+        </script>
+    
+</body>
+</html>
