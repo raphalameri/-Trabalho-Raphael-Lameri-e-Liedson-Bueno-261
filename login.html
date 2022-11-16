@@ -19,11 +19,15 @@
       </ul>
 
 
-      <input id="name" type="text" placeholder="Digite o seu nome completo...">
+      <input id="name" type="text" placeholder="Digite o seu nome...">
 
       <p id="nameError"></p>
 
-    <input id="email" type="email" placeholder="Digite o seu user...">
+      <input id="login" type="text" placeholder="Digite o seu login...">
+
+      <p id="loginError"></p>
+
+    <input id="email" type="email" placeholder="Digite o seu email...">
 
       <p id="emailError"></p>
 
@@ -42,26 +46,79 @@
 
       <script>
           function testar(){
-             const x= document.getElementById("name");
-             if(x.value==""){
+
+            /*Campo obrigatório*/
+             var name= document.getElementById("name").value;
+             if(name==""){
                  document.getElementById('nameError').innerHTML="Esse campo é obrigatório";
              }
-            
-             const y= document.getElementById("email");
-             if(y.value==""){
-                 document.getElementById('emailError').innerHTML="Esse campo é obrigatório";
-             }
-                 const z= document.getElementsByClassName("password")[0];
-                 const zz= document.getElementsByClassName("password")[1];   
-             if(z.value==""){
-                 document.getElementById('senhaError').innerHTML="Esse campo é obrigatório";
-             }
-             if(zz.value==""){
-                 document.getElementById('senhaError').innerHTML="Esse campo é obrigatório";
+             else{
+                document.getElementById('nameError').innerHTML="";
              }
 
-             
+             var login= document.getElementById("login").value;
+             if(login==""){
+                 document.getElementById('loginError').innerHTML="Esse campo é obrigatório";
+             }
+             else{
+                document.getElementById('loginError').innerHTML="";
+             }
+            
+             var email= document.getElementById("email").value;
+             if(email==""){
+                 document.getElementById('emailError').innerHTML="Esse campo é obrigatório";
+             }
+             else{
+                document.getElementById('emailError').innerHTML="";
+             }
+
+                 var senha= document.getElementsByClassName("password")[0].value;
+                 var senhaconfirm= document.getElementsByClassName("password")[1].value;   
+             if(senha==""){
+                 document.getElementById('senhaError').innerHTML="Esse campo é obrigatório";
+             }
+             else{
+                document.getElementById('senhaError').innerHTML="";
+             }
+             if(senhaconfirm==""){
+                 document.getElementById('senhaError').innerHTML="Esse campo é obrigatório";
+             }
+             else{
+                document.getElementById('senhaError').innerHTML="";
+             }
+                 
+             /*Numero letras*/
+             if(name.length<10){
+                 document.getElementById('nameError').innerHTML="O nome precisa de mais de 10 letras";
+                 
+             }
+
+             if(login.length>10){
+                 document.getElementById('loginError').innerHTML="O login precisa de menos de 10 letras";
+                 
+             }
+
+             /*senhas iguais*/
+                if(senha!=senhaconfirm){ 
+                 document.getElementById('senhaError').innerHTML="Senhas diferentes";
+             }
+             else{
+                document.getElementById('senhaError').innerHTML="";
+
+             }
+         
+              /*@*/
+              if(email==""){
+                 document.getElementById('emailError').innerHTML="Esse campo é obrigatório";
+             }
+
+
           }
+
+
+
+
+         
             
           
 
