@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Lista de Tarefas</title>
+
+   
+</head>
+<body>
+    <ul>
+      <li><a href="./inicio.html">Inicio</a></li>
+      <li><a href="./Trabalho01.html">Lista de Musicas</a></li>
+      <li><a href="https://www.instagram.com/sirlamerii/?utm_medium=copy_link">Contato</a></li>
+      <li><a href="./sulElvis.html">Sobre Elvis</a></li>
+  <li style="float:right"><a class="active" href="login.html">Login</a></li>
+      </ul>
+
+
+      <input id="name" type="text" placeholder="Digite o seu nome completo...">
+
+      <p id="nameError"></p>
+
+    <input id="email" type="email" placeholder="Digite o seu user...">
+
+      <p id="emailError"></p>
+
+      <input class="password" type="password" placeholder="Digite a sua senha...">
+      
+      <input class="password" type="password" placeholder="Confirme sua senha...">
+
+      <p id="senhaError"></p>
+
+      <button id="bttlogar" onclick="testar();">Logar</button>
+
+
+
+
+
+
+      <script>
+          function testar(){
+             const x= document.getElementById("name");
+             if(x.value==""){
+                 document.getElementById('nameError').innerHTML="Esse campo é obrigatório";
+             }
+            
+             const y= document.getElementById("email");
+             if(y.value==""){
+                 document.getElementById('emailError').innerHTML="Esse campo é obrigatório";
+             }
+                 const z= document.getElementsByClassName("password")[0];
+                 const zz= document.getElementsByClassName("password")[1];   
+             if(z.value==""){
+                 document.getElementById('senhaError').innerHTML="Esse campo é obrigatório";
+             }
+             if(zz.value==""){
+                 document.getElementById('senhaError').innerHTML="Esse campo é obrigatório";
+             }
+
+             
+          }
+            
+          
+
+          
+
+          
+        
+
+
+
+
+      </script>
+
+     
+    
+      
+
+</body>
+</html>
