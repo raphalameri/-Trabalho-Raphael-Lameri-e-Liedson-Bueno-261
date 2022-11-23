@@ -41,8 +41,9 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
+    background-color: black;
     border-radius: 5px;
+    margin-bottom: 10px;
   }
   
   li {
@@ -100,4 +101,30 @@ ul {
 
 }
 
- 
+
+ /*Cadastro*/
+
+ #name,.password,#login,#email{
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  margin-left: 5px;
+  padding: 10px;
+}
+
+#bttlogar{
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  padding: 10px;
+  align-items: center;
+  
+}
+
+.loginpag{
+  font-family: 'Segoe UI', sans-serif;
+}
+
+p.loginpag{
+  font-size:small ;
+}
