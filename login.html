@@ -18,24 +18,27 @@
   <li style="float:right"><a class="active" href="login.html">Login</a></li>
       </ul>
 
+      <label class="loginpag" for="name">Nome:</label>
+      <input  id="name" type="text" placeholder="Digite o seu nome...">
 
-      <input id="name" type="text" placeholder="Digite o seu nome...">
+      <p  class="loginpag" id="nameError"></p>
 
-      <p id="nameError"></p>
-
+      <label class="loginpag" for="login">Login:</label>
       <input id="login" type="text" placeholder="Digite o seu login...">
 
-      <p id="loginError"></p>
+      <p  class="loginpag" id="loginError"></p>
 
+      <label class="loginpag" for="email">Email:</label>
     <input id="email" type="email" placeholder="Digite o seu email...">
 
-      <p id="emailError"></p>
+      <p  class="loginpag" id="emailError"></p>
 
+      <label class="loginpag" for="senha">Senha:</label>
       <input class="password" type="password" placeholder="Digite a sua senha...">
       
       <input class="password" type="password" placeholder="Confirme sua senha...">
 
-      <p id="senhaError"></p>
+      <p  class="loginpag" id="senhaError"></p>
 
       <button id="bttlogar" onclick="testar();">Logar</button>
 
@@ -50,60 +53,82 @@
             /*Campo obrigatório*/
              var name= document.getElementById("name").value;
              if(name==""){
+                 
                  document.getElementById('nameError').innerHTML="Esse campo é obrigatório";
+                 document.getElementById('name').style.borderColor="red"
              }
              else{
                 document.getElementById('nameError').innerHTML="";
+                document.getElementById('name').style.borderColor="green"
              }
+
+
 
              var login= document.getElementById("login").value;
              if(login==""){
                  document.getElementById('loginError').innerHTML="Esse campo é obrigatório";
+                 document.getElementById('login').style.borderColor="red"
              }
              else{
                 document.getElementById('loginError').innerHTML="";
+                document.getElementById('login').style.borderColor="green"
              }
+
+
+
             
              var email= document.getElementById("email").value;
              if(email==""){
                  document.getElementById('emailError').innerHTML="Esse campo é obrigatório";
+                 document.getElementById('email').style.borderColor="red"
              }
              else{
                 document.getElementById('emailError').innerHTML="";
+                document.getElementById('email').style.borderColor="green"
              }
+
+
 
                  var senha= document.getElementsByClassName("password")[0].value;
                  var senhaconfirm= document.getElementsByClassName("password")[1].value;   
              if(senha==""){
                  document.getElementById('senhaError').innerHTML="Esse campo é obrigatório";
+                 document.getElementsByClassName('password')[0].style.borderColor="red"
              }
              else{
                 document.getElementById('senhaError').innerHTML="";
+                document.getElementsByClassName('password')[0].style.borderColor="green"
              }
              if(senhaconfirm==""){
                  document.getElementById('senhaError').innerHTML="Esse campo é obrigatório";
+                 document.getElementsByClassName('password')[1].style.borderColor="red"
              }
              else{
                 document.getElementById('senhaError').innerHTML="";
+                document.getElementsByClassName('password')[1].style.borderColor="green"
              }
                  
              /*Numero letras*/
              if(name.length<10){
                  document.getElementById('nameError').innerHTML="O nome precisa de mais de 10 letras";
-                 
+                  document.getElementById('name').style.borderColor="red"
              }
+             
 
              if(login.length>10){
                  document.getElementById('loginError').innerHTML="O login precisa de menos de 10 letras";
-                 
+                
+             }
+             else{
+                  document.getElementById('name').style.borderColor="green"
              }
 
              /*senhas iguais*/
                 if(senha!=senhaconfirm){ 
-                 document.getElementById('senhaError').innerHTML="Senhas diferentes";
+                 document.getElementsByClassName('senhaError')[0].innerHTML="Senhas diferentes";
              }
              else{
-                document.getElementById('senhaError').innerHTML="";
+                document.getElementsByClassName('senhaError')[1].innerHTML="";
 
              }
          
@@ -111,6 +136,8 @@
               if(email==""){
                  document.getElementById('emailError').innerHTML="Esse campo é obrigatório";
              }
+
+             
 
 
           }
