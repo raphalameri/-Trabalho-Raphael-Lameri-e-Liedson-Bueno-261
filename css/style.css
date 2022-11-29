@@ -1,0 +1,105 @@
+body{
+    margin: 3%;    
+    /*border: groove black 5px;*/
+    background-color: lightgray;
+
+    
+}
+ 
+#imagem{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.texto{
+    font-family:'Times New Roman', Times, serif;
+
+    margin-left: 10px;
+    margin-right: 10px;
+
+    font-size: large;
+
+    margin-top: 15px;
+}
+
+.imagem{
+
+ border-radius: 5px;
+
+ align-items: center;
+
+ margin-top: 15px;
+}
+
+ .list{
+    display: flex;
+    flex-direction: column;
+  }
+/*Menu*/
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: black;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover:not(.active) {
+    background-color: #111;
+  }
+  
+  .active {
+    background-color: #04AA6D;
+  }
+
+  #input{
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    margin-left: 5px;
+    padding: 10px;
+}
+
+#add{
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+#apagar{
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+}
+
+#tarefas{
+    background-color: aqua;
+    width: 215px;
+    height: 300px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+#botaoo{
+    margin-left: 10px;
+
+}
+
+
+ 

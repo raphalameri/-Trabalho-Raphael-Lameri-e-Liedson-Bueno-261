@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/style.css">
+  <script type="text/javascript" src="./js/script.js"></script>
     <title>Elenco di Attività</title>
 
 
@@ -25,44 +26,5 @@
         
         <input id="input" placeholder="Digite..." type="text">
         <button onclick="adcionar()" id="add" >  Adcionar Música </button>
-        
-      
-        
-        <script>
-        function adcionar(){
-        const conteudo= document.getElementById('input').value;
-        const novah3= document.createElement('h3');
-        novah3.innerHTML= conteudo;
-        const novobotao= document.createElement('button');
-        novobotao.innerHTML= "Ouvi/Gostei";
-        const novobotaoo= document.createElement('button');
-        novobotaoo.innerHTML= "Não ouvi/Não gostei";
-       
-        
-        novobotao.addEventListener('click', function(){
-            novah3.innerHTML=conteudo+" &#9989";    
-        
-        })
-
-        novobotaoo.addEventListener('click', function(){
-            novah3.innerHTML=conteudo+"&#10060";    
-        
-        })
-        
-        document.body.appendChild(novah3);
-        document.body.appendChild(novobotao);
-        document.body.appendChild(novobotaoo);
-        document.body.value="";
-        
-        
-        /*window.alert(conteudo);*/
-        
-        }
-        
-        
-         
-            
-        </script>
-    
 </body>
 </html>

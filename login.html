@@ -1,167 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Lista de Tarefas</title>
+    <link rel="stylesheet" href="./css/cadastro.css">
+    <script type="text/javascript" src="./js/script.js"></script>
+    <title>Cadastro</title>
 
-   
+
 </head>
-<body>
-    <ul>
-      <li><a href="./inicio.html">Inicio</a></li>
-      <li><a href="./Trabalho01.html">Lista de Musicas</a></li>
-      <li><a href="https://www.instagram.com/sirlamerii/?utm_medium=copy_link">Contato</a></li>
-      <li><a href="./sulElvis.html">Sobre Elvis</a></li>
-  <li style="float:right"><a class="active" href="login.html">Login</a></li>
-      </ul>
 
-      <label class="loginpag" for="name">Nome:</label>
-      <input  id="name" type="text" placeholder="Digite o seu nome...">
+<main class="container">
+    <h2>Cadastre-se</h2>
+    <form action="">
+        <div class="input-field" id="nameinput">
+            <input type="text" id="name" placeholder="Digite o seu nome">
+            <div class="underline"></div>
+        </div>
+        <p id="nameError"></p>
 
-      <p  class="loginpag" id="nameError"></p>
+        <div class="input-field">
+            <input type="text" id="login" placeholder="Digite seu login">
+            <div class="underline"></div>
+        </div>
+        <p id="loginError"></p>
 
-      <label class="loginpag" for="login">Login:</label>
-      <input id="login" type="text" placeholder="Digite o seu login...">
+        <br>
+        <div class="input-field" id="logininput">
+            <input type="email" id="email" placeholder="Digite seu email">
+            <div class="underline"></div>
+        </div>
+        <p id="emailError"></p>
 
-      <p  class="loginpag" id="loginError"></p>
+        <br>
+        <div class="input-field">
+            <input type="password" id="password" placeholder="Crie sua senha">
+            <div class="underline"></div>
+        </div>
 
-      <label class="loginpag" for="email">Email:</label>
-    <input id="email" type="email" placeholder="Digite o seu email...">
+        <br>
+        <div class="input-field">
+            <input type="password" id="passworddd" placeholder="Confirme sua senha">
+            <div class="underline"></div>
+        </div>
+        <p id="senhaError"></p>
 
-      <p  class="loginpag" id="emailError"></p>
-
-      <label class="loginpag" for="senha">Senha:</label>
-      <input class="password" type="password" placeholder="Digite a sua senha...">
-      
-      <input class="password" type="password" placeholder="Confirme sua senha...">
-
-      <p  class="loginpag" id="senhaError"></p>
-
-      <button id="bttlogar" onclick="testar();">Logar</button>
-
-
-
-
-
-
-      <script>
-          function testar(){
-
-            /*Campo obrigatório*/
-             var name= document.getElementById("name").value;
-             if(name==""){
-                 
-                 document.getElementById('nameError').innerHTML="Esse campo é obrigatório";
-                 document.getElementById('name').style.borderColor="red"
-             }
-             else{
-                document.getElementById('nameError').innerHTML="";
-                document.getElementById('name').style.borderColor="green"
-             }
+    </form>
+    <button onclick="testar();" type="submit" value="Continue">Continue</button>
+    <button onclick="inicio();" type="submit" value="Continue">Página Inicial</button>
 
 
-
-             var login= document.getElementById("login").value;
-             if(login==""){
-                 document.getElementById('loginError').innerHTML="Esse campo é obrigatório";
-                 document.getElementById('login').style.borderColor="red"
-             }
-             else{
-                document.getElementById('loginError').innerHTML="";
-                document.getElementById('login').style.borderColor="green"
-             }
-
-
-
-            
-             var email= document.getElementById("email").value;
-             if(email==""){
-                 document.getElementById('emailError').innerHTML="Esse campo é obrigatório";
-                 document.getElementById('email').style.borderColor="red"
-             }
-             else{
-                document.getElementById('emailError').innerHTML="";
-                document.getElementById('email').style.borderColor="green"
-             }
-
-
-
-                 var senha= document.getElementsByClassName("password")[0].value;
-                 var senhaconfirm= document.getElementsByClassName("password")[1].value;   
-             if(senha==""){
-                 document.getElementById('senhaError').innerHTML="Esse campo é obrigatório";
-                 document.getElementsByClassName('password')[0].style.borderColor="red"
-             }
-             else{
-                document.getElementById('senhaError').innerHTML="";
-                document.getElementsByClassName('password')[0].style.borderColor="green"
-             }
-             if(senhaconfirm==""){
-                 document.getElementById('senhaError').innerHTML="Esse campo é obrigatório";
-                 document.getElementsByClassName('password')[1].style.borderColor="red"
-             }
-             else{
-                document.getElementById('senhaError').innerHTML="";
-                document.getElementsByClassName('password')[1].style.borderColor="green"
-             }
-                 
-             /*Numero letras*/
-             if(name.length<10){
-                 document.getElementById('nameError').innerHTML="O nome precisa de mais de 10 letras";
-                  document.getElementById('name').style.borderColor="red"
-             }
-             
-
-             if(login.length>10){
-                 document.getElementById('loginError').innerHTML="O login precisa de menos de 10 letras";
-                
-             }
-             else{
-                  document.getElementById('name').style.borderColor="green"
-             }
-
-             /*senhas iguais*/
-                if(senha!=senhaconfirm){ 
-                 document.getElementsByClassName('senhaError')[0].innerHTML="Senhas diferentes";
-             }
-             else{
-                document.getElementsByClassName('senhaError')[1].innerHTML="";
-
-             }
-         
-              /*@*/
-              if(email==""){
-                 document.getElementById('emailError').innerHTML="Esse campo é obrigatório";
-             }
-
-             
-
-
-          }
-
-
-
-
-         
-            
-          
-
-          
-
-          
-        
-
-
-
-
-      </script>
-
-     
-    
-      
+</main>
 
 </body>
+
 </html>
